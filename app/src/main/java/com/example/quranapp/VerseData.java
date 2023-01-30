@@ -9,6 +9,8 @@ public class VerseData {
         return surahAyatCount[surahNum];
     }
 
+    /* This is commit */
+
     public int getTotalAyatCount(int surahNum){
         int count=0;
         for(int i=0;i<surahNum;i++){
