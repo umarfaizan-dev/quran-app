@@ -2,6 +2,8 @@ package com.example.quranapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     public TextView Verse, SuraNum, VerseNum, NumAyat, NumSura;
-    public Button btnSearch;
+    public Button btnSearch, gitButton;
     int SurahNumber;
     int AyatNumber;
 
@@ -26,6 +28,18 @@ public class MainActivity extends AppCompatActivity {
         VerseNum = findViewById(R.id.VerseNum);
         NumAyat = findViewById(R.id.NumAyat);
         NumSura = findViewById(R.id.NumSura);
+        gitButton = findViewById(R.id.gitButton);
+
+        gitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String url = "https://github.com/umarfaizan-dev/quran-app/commits/main";
+                Uri webpage = Uri.parse(url);
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
+            }
+        });
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
