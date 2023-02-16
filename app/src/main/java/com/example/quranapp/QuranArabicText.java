@@ -1,5 +1,4 @@
 package com.example.quranapp;
-import java.util.List;
 public class QuranArabicText {
     public String[] QuranArabicText = new String[]
             {
